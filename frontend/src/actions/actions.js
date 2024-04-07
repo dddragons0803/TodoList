@@ -44,7 +44,7 @@ export const login = (email, password) => {
     return async (dispatch) => {
         dispatch(loginRequest());
         try {
-            const response = await axios.post('http://localhost:8000/api/users/signin', { email, password });
+            const response = await axios.post('https://todolist-ogk8.onrender.com/api/users/signin', { email, password });
             console.log(response);
             dispatch(loginSuccess(response.data.user, response.data.token));
         } catch (error) {
@@ -58,7 +58,7 @@ export const signup = (userData) => {
     return async (dispatch) => {
         dispatch(signupRequest());
         try {
-            const response = await axios.post('http://localhost:8000/api/users/register', userData);
+            const response = await axios.post('https://todolist-ogk8.onrender.com/api/users/register', userData);
             console.log(response);
             dispatch(signupSuccess(response.data.user));
         } catch (error) {
@@ -75,7 +75,7 @@ export const addTodoAsync = (todoData, authToken) => {
     return async (dispatch) => {
         try {
            
-            const response = await axios.post('http://localhost:8000/api/lists/addTask', todoData, {
+            const response = await axios.post('https://todolist-ogk8.onrender.com/api/lists/addTask', todoData, {
                 headers: {
                     Authorization:
                     `Bearer ${authToken}`
@@ -104,7 +104,7 @@ export const updateTodoAsync = (updatedTodoData, authToken) => {
     // console.log(authToken)
     return async (dispatch) => {
         try {
-            await axios.put(`http://localhost:8000/api/lists/updateTask/${id}`, updatedTodoData, {
+            await axios.put(`https://todolist-ogk8.onrender.com/api/lists/updateTask/${id}`, updatedTodoData, {
                 headers: {
                     Authorization: `Bearer ${authToken}`
                 }
@@ -125,7 +125,7 @@ export const deleteTodoAsync = (id, authToken) => {
     console.log(1)
     return async (dispatch) => {
         try {
-            await axios.delete(`http://localhost:8000/api/lists/deleteTask/${id}`, {
+            await axios.delete(`https://todolist-ogk8.onrender.com/api/lists/deleteTask/${id}`, {
                 headers: {
                     Authorization: `Bearer ${authToken}`
                 }
@@ -142,7 +142,7 @@ export const deleteTodoAsync = (id, authToken) => {
 export const getTodosAsync = (authToken) => {
     return async (dispatch) => {
         try {
-            const response = await axios.get('http://localhost:8000/api/lists/getTasks', {
+            const response = await axios.get('https://todolist-ogk8.onrender.com/api/lists/getTasks', {
                 headers: {
                     Authorization: `Bearer ${authToken}`
                 }
