@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={isAuthenticated ? <Home /> : <Navigate to="/account/login" />} />
           <Route path="/account/login" element={!isAuthenticated ? <Login /> : <Navigate to="/" />} />
-          <Route path="/account/register" element={!isAuthenticated ? <Register /> : <Navigate to="/" />} />
+          <Route path="/account/register" element={!isAuthenticated ? <Register /> : <Login />} />
           {!isAuthenticated && <Route path="*" element={<Navigate to="/account/login" />} />}
         </Routes>
       </div>
