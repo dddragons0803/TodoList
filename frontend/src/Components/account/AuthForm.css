@@ -1,0 +1,26 @@
+.card{
+    background-color: bisque;
+    /* width: 60vw; */
+    margin:1px ;
+}
+.mainnform{
+    margin: 10px auto;
+}
+.btn{
+    background: #341464;
+    margin-right: 13px;
+    /* align-items: center; */
+}
+.btn:hover{
+    background: #552e8f;
+}
+.instructionss{
+    margin-left: 40px;
+}
+
+@media (min-width: 576px)
+{
+    .offset-sm-2 {
+    margin-left: 0 !important;
+}
+}

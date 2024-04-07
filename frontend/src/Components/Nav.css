@@ -1,0 +1,12 @@
+/* .navbar-top-headerr{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between !important;
+} */
+.home-link{
+    margin-left: 20px;
+} 
+.nav-logout-button{
+    margin-left: 15px;
+    background: none !important;
+}

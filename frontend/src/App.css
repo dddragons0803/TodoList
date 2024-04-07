@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* height: 100vh; */
+}
+body{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: radial-gradient(#8758ff, #220b5d, #0a031c) !important;
+    background-color: #8758ff;
+    /* background: radial-gradien(#8758ff,#fff); */
+}
+
+
+.Navbarr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+}
